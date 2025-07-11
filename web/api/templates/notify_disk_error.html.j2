@@ -1,0 +1,21 @@
+{% extends "base.html.j2" %}
+{% block content %}
+<p><strong>Disk Access Error Detected</strong></p>
+
+<p>A disk error was detected on <strong>{{ mount_point }}</strong>:</p>
+
+<ul>
+    <li><strong>Device:</strong> {{ device }}</li>
+    <li><strong>Error Type:</strong> {{ error_type }}</li>
+    <li><strong>Details:</strong> {{ message }}</li>
+    <li><strong>Timestamp:</strong> {{ timestamp }}</li>
+</ul>
+
+<p>This may indicate a failing disk or I/O issue.</p>
+
+{% if recommendation %}
+<p><strong>Recommendation:</strong> {{ recommendation }}</p>
+{% endif %}
+
+<p>Please verify the disk state and run diagnostics as soon as possible.</p>
+{% endblock %}

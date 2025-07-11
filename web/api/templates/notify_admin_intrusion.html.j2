@@ -1,0 +1,13 @@
+{% extends "base.html.j2" %}
+{% block content %}
+<p><strong>Administrator Notice:</strong></p>
+<p>A suspicious login attempt has been blocked for the following user:</p>
+<ul>
+    <li><strong>User:</strong> {{ username }}</li>
+    <li><strong>IP:</strong> {{ ip }}</li>
+    <li><strong>Location:</strong> {{ location }}</li>
+    <li><strong>Browser:</strong> {{ browser }}</li>
+    <li><strong>OS:</strong> {{ os }}</li>
+    <li><strong>Time:</strong> {{ timestamp }}</li>
+</ul>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "base.html.j2" %}
+{% block content %}
+<p><strong>SMART Warning on Disk {{ disk_name }}</strong></p>
+
+<ul>
+    <li><strong>Device:</strong> {{ device }}</li>
+    <li><strong>Temperature:</strong> {{ temperature }}°C</li>
+    <li><strong>Reallocated Sectors:</strong> {{ reallocated }}</li>
+    <li><strong>Pending Sectors:</strong> {{ pending }}</li>
+    <li><strong>Uptime:</strong> {{ power_on_hours }} h</li>
+</ul>
+
+<p>These warnings indicate potential disk degradation.</p>
+
+<p><strong>Recommended Action:</strong> Backup your data and consider replacing the drive.</p>
+{% endblock %}

@@ -1,0 +1,7 @@
+{
+  "welcome": "Welcome",
+  "login": "Login",
+  "logout": "Logout",
+  "error_invalid_password": "Password is incorrect",
+  "notification_new_message": "New notification received"
+}

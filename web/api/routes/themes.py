@@ -1,24 +1,19 @@
 from fastapi import APIRouter
-from fastapi.responses import JSONResponse
+from typing import List
+from web.api.models.themes import Theme, ThemeCreate, ThemeRead
+from services.themes import list_themes, create_theme, apply_theme
 
 router = APIRouter()
 
-# Thèmes du store (simulé)
-STORE_THEMES = [
-    {"id": "theme1", "name": "Blue Classic", "approved": True, "source": "store"},
-    {"id": "theme2", "name": "Solarized Dark", "approved": True, "source": "store"},
-    {"id": "theme3", "name": "Experimental Red", "approved": False, "source": "store"},
-]
+@router.get("/", response_model=List[ThemeRead])
+async def get_themes():
+    return await list_themes()
 
-@router.get("/store")
-async def get_store_themes():
-    return JSONResponse(content=STORE_THEMES)
+@router.post("/", response_model=ThemeRead)
+async def add_theme(theme: ThemeCreate):
+    return await create_theme(theme)
 
-@router.get("/", response_model=list[Theme])
-def get_themes():
-    return list_themes()
-
-@router.post("/activate")
-def activate(name: str):
-    activate_theme(name)
-    return {"status": "activated"}
+@router.post("/apply/{theme_id}")
+async def apply_theme_route(theme_id: int):
+    await apply_theme(theme_id)
+    return {"detail": "Theme applied"}

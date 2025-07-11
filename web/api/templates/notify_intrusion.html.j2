@@ -1,0 +1,10 @@
+{% extends "base.html.j2" %}
+{% block content %}
+<p><strong>Security Alert:</strong> A suspicious login attempt has been detected.</p>
+<p><strong>IP:</strong> {{ ip }}</p>
+<p><strong>Location:</strong> {{ location }}</p>
+<p><strong>Browser:</strong> {{ browser }}</p>
+<p><strong>OS:</strong> {{ os }}</p>
+<p><strong>Device:</strong> {{ device }}</p>
+<p><strong>Time:</strong> {{ timestamp }}</p>
+{% endblock %}

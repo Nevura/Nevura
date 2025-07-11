@@ -1,12 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ lang or 'en' }}">
 <head>
-  <meta charset="utf-8" />
-  <title>{{ title }}</title>
+    <meta charset="UTF-8">
+    <title>{{ subject }}</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #f9f9f9;
+            color: #111;
+            padding: 2rem;
+        }
+        .header {
+            background-color: #111;
+            color: white;
+            padding: 1rem;
+        }
+        .footer {
+            font-size: 0.9rem;
+            margin-top: 2rem;
+            color: #888;
+        }
+        .content {
+            padding: 1rem 0;
+        }
+    </style>
 </head>
-<body style="font-family: sans-serif; background-color: #F9FAFB; color: #111827;">
-  <div style="padding: 2rem;">
-    {{ content | safe }}
-  </div>
+<body>
+    <div class="header">
+        <h1>Nervura OS</h1>
+    </div>
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+    <div class="footer">
+        {{ footer or 'Nervura OS – Open Infrastructure Platform' }}
+    </div>
 </body>
 </html>

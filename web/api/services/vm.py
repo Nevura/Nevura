@@ -1,15 +1,22 @@
-import subprocess
-from ..models.vm import VM
 from typing import List
+from web.api.models.vms import VM, VMCreate, VMRead
 
-def list_vms() -> List[VM]:
-    return []
+async def list_vms() -> List[VMRead]:
+    # Liste VM et containers (Docker, LXC, Jails)
+    pass
 
-def start_vm(name: str):
-    subprocess.run(["virsh", "start", name], check=False)
+async def get_vm(vm_id: int) -> VMRead | None:
+    # Récupère VM par ID
+    pass
 
-def stop_vm(name: str):
-    subprocess.run(["virsh", "shutdown", name], check=False)
+async def create_vm(vm: VMCreate) -> VMRead:
+    # Crée VM ou container
+    pass
 
-def delete_vm(name: str):
-    subprocess.run(["virsh", "undefine", name], check=False)
+async def update_vm(vm_id: int, vm: VMCreate) -> VMRead:
+    # Met à jour VM
+    pass
+
+async def delete_vm(vm_id: int) -> None:
+    # Supprime VM
+    pass

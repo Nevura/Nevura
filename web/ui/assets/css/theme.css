@@ -1,0 +1,30 @@
+:root {
+  /* Light mode */
+  --background-light: #f5f7fa;
+  --foreground-light: #222222;
+  --gray-100: #f8f9fa;
+  --gray-200: #e9ecef;
+  --gray-300: #dee2e6;
+  --gray-400: #ced4da;
+  --gray-500: #adb5bd;
+  --gray-600: #6c757d;
+  --gray-700: #495057;
+  --gray-800: #343a40;
+  --gray-900: #212529;
+
+  --blue-300: #74c0fc;
+  --blue-600: #228be6;
+  --blue-800: #1864ab;
+
+  --shadow-light: rgba(0,0,0,0.05);
+}
+
+.dark {
+  --background: #1f2937;
+  --foreground: #d1d5db;
+  --border-color: #374151;
+  --primary: #3b82f6;
+  --primary-light: #60a5fa;
+  --primary-dark: #1e40af;
+  --shadow-color: rgba(0,0,0,0.5);
+}

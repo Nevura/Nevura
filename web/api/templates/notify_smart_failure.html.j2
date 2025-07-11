@@ -1,0 +1,21 @@
+{% extends "base.html.j2" %}
+{% block content %}
+<p><strong>Disk Failure Imminent: {{ disk_name }}</strong></p>
+
+<p>The SMART monitoring system has detected critical parameters indicating a **high probability of disk failure**.</p>
+
+<ul>
+    <li><strong>Device:</strong> {{ device }}</li>
+    <li><strong>Status:</strong> {{ status }}</li>
+    <li><strong>Failing Attribute:</strong> {{ failing_attribute }}</li>
+    <li><strong>Serial:</strong> {{ serial }}</li>
+    <li><strong>Power On Hours:</strong> {{ power_on_hours }} h</li>
+</ul>
+
+<p><strong>IMMEDIATE ACTION REQUIRED:</strong></p>
+<p>Backup all data on this disk and schedule replacement as soon as possible.</p>
+
+{% if smart_link %}
+<p>Complete SMART report: <a href="{{ smart_link }}">{{ smart_link }}</a></p>
+{% endif %}
+{% endblock %}

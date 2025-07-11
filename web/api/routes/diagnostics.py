@@ -1,9 +1,9 @@
 from fastapi import APIRouter
-from ..services.diagnostics import get_diagnostics
-from ..models.diagnostics import Diagnostics
+from services.diagnostics import run_diagnostics
 
 router = APIRouter()
 
-@router.get("/", response_model=Diagnostics)
-def diagnostics():
-    return get_diagnostics()
+@router.get("/")
+async def diagnostics():
+    results = await run_diagnostics()
+    return results

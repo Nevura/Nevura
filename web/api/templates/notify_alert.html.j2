@@ -1,5 +1,6 @@
 {% extends "base.html.j2" %}
 {% block content %}
-<h2>Alerte importante</h2>
-<p>{{ message }}</p>
+<p><strong>Alert:</strong> {{ message }}</p>
+<p>Time: {{ timestamp }}</p>
+<p>Severity: {{ level }}</p>
 {% endblock %}

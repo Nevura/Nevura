@@ -1,0 +1,8 @@
+{% extends "base.html.j2" %}
+{% block content %}
+<p>Your NervuraOS account has been created.</p>
+<p>Username: {{ username }}</p>
+<p>To set your password, click the following link:</p>
+<p><a href="{{ set_password_url }}">{{ set_password_url }}</a></p>
+<p>If you didn’t request this account, you can ignore this message.</p>
+{% endblock %}

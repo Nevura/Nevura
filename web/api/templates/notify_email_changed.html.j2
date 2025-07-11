@@ -1,0 +1,17 @@
+{% extends "base.html.j2" %}
+{% block content %}
+<p><strong>Email Address Changed</strong></p>
+
+<p>Hello {{ username }},</p>
+
+<p>The email associated with your account has been updated.</p>
+
+<ul>
+    <li><strong>Old Email:</strong> {{ old_email }}</li>
+    <li><strong>New Email:</strong> {{ new_email }}</li>
+    <li><strong>Time:</strong> {{ timestamp }}</li>
+    <li><strong>IP Address:</strong> {{ ip }}</li>
+</ul>
+
+<p>If you did not make this change, please <strong>contact your administrator immediately</strong>.</p>
+{% endblock %}

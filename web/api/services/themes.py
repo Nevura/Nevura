@@ -1,7 +1,14 @@
-from ..models.theme import Theme
+from typing import List
+from web.api.models.themes import Theme, ThemeCreate, ThemeRead
 
-def list_themes():
-    return []
+async def list_themes() -> List[ThemeRead]:
+    # Liste thèmes disponibles
+    pass
 
-def activate_theme(name: str):
+async def create_theme(theme: ThemeCreate) -> ThemeRead:
+    # Ajoute un thème
+    pass
+
+async def apply_theme(theme_id: int) -> None:
+    # Applique un thème
     pass

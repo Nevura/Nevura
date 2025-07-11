@@ -1,22 +1,21 @@
-from pydantic import BaseModel
-from ..models.module import Module
+from sqlmodel import SQLModel, Field
+from typing import Optional
+from datetime import datetime
 
-class Module(BaseModel):
-    id: str
+class ModuleBase(SQLModel):
     name: str
-    category: str
-    installed: bool
-    version: str
+    description: Optional[str] = None
+    enabled: bool = False
 
-def list_modules():
-    return [
-        Module(name="docker", installed=True),
-        Module(name="lxc", installed=True),
-        Module(name="qemu", installed=True)
-    ]
+class Module(ModuleBase, table=True):
+    id: Optional[int] = Field(default=None, primary_key=True)
+    version: Optional[str] = None
+    installed_at: Optional[datetime] = None
 
-def enable_module(name: str):
+class ModuleCreate(ModuleBase):
     pass
 
-def disable_module(name: str):
-    pass
+class ModuleRead(ModuleBase):
+    id: int
+    version: Optional[str]
+    installed_at: Optional[datetime]
