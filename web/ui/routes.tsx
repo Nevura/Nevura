@@ -1,0 +1,10 @@
+<Route path="/dashboard" element={<Dashboard />} />
+<Route path="/modules" element={<Modules />} />
+<Route path="/network" element={<Network />} />
+<Route path="/diagnostics" element={<Diagnostics />} />
+<Route path="/certificates" element={<Certificates />} />
+<Route path="/volumes" element={<Volumes />} />
+<Route path="/shares" element={<Shares />} />
+<Route path="/users" element={<Users />} />
+<Route path="/alerts" element={<Alerts />} />
+<Route path="/settings" element={<Settings />} />
