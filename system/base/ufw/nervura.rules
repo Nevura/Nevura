@@ -1,0 +1,11 @@
+# Allow HTTP/HTTPS
+ufw allow 80/tcp
+ufw allow 443/tcp
+
+# Allow SSH
+ufw allow 22/tcp
+
+# Allow Nervura-specific ports
+ufw allow 8080/tcp    # Web installer
+ufw allow 8081/tcp    # Nextcloud reverse proxy
+ufw allow 8123/tcp    # Home Assistant reverse proxy

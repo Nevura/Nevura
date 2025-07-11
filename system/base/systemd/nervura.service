@@ -1,0 +1,11 @@
+[Unit]
+Description=Nervura OS Core Daemon
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/nervura-core
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
