@@ -1,0 +1,11 @@
+[Unit]
+Description=Network Auto Configuration
+After=network-pre.target
+
+[Service]
+ExecStart=/usr/local/bin/nervura-netconfig
+Type=oneshot
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,11 @@
+[Unit]
+Description=Storage Mount and Check
+After=local-fs.target
+
+[Service]
+ExecStart=/usr/local/bin/nervura-storage
+Type=oneshot
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
