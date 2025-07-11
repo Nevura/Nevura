@@ -1,0 +1,87 @@
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Node.js
+node_modules/
+dist/
+build/
+.vscode/
+*.log
+
+# Environment files
+.env
+.env.local
+.env.*.local
+.env.template
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+venv/
+env/
+.Python
+*.sqlite3
+*.db
+*.egg-info/
+pip-wheel-metadata/
+*.egg
+*.pytest_cache/
+.pytest_cache/
+.mypy_cache/
+.coverage
+.coverage.*
+.cache/
+nosetests.xml
+tox.ini
+.coverage
+.cache
+
+# Rust / Cargo
+/target/
+/**/target/
+Cargo.lock
+
+# Docker
+docker-compose.override.yml
+docker-compose.override.yaml
+docker-compose.*.yml
+*.env
+*.local
+*.log
+*.pid
+
+# Logs
+*.log
+logs/
+*.out
+*.err
+
+# IDEs
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Generated files
+*.class
+*.jar
+*.war
+*.ear
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*~
+
+# Others
+*.bak
+*.old
+*.orig
